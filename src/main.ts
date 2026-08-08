@@ -1,0 +1,15 @@
+import { NestFactory } from '@nestjs/core';
+import { AppModule } from './app.module';
+
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+  app.enableCors({
+    origin: true,
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+    credentials: true,
+  });
+  const port = process.env.PORT ?? 3000;
+  await app.listen(port);
+  console.log(`NestJS backend listening on port ${port}`);
+}
+bootstrap();
