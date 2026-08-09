@@ -5,12 +5,12 @@ NestJS API for the Kubernetes sample profile app.
 Sibling repos:
 
 - `k8s-demo-fe` – Next.js UI
-- `k8s-demo-infra` – docker-compose + Kubernetes manifests ([system overview](../k8s-demo-infra/docs/overview.md))
+- `k8s-demo-infra` – docker-compose + Kubernetes manifests ([System Overview](https://github.com/bablukpik/k8s-demo-infra/blob/main/docs/overview.md))
 
 ## API
 
 | Method | Path               | Description         |
-|--------|--------------------|---------------------|
+| ------ | ------------------ | ------------------- |
 | GET    | `/get-profile`     | Fetch user profile  |
 | POST   | `/update-profile`  | Upsert user profile |
 | GET    | `/profile-picture` | Serve profile image |
@@ -49,7 +49,7 @@ npm run start:dev
 API: http://localhost:8000  
 Health: http://localhost:8000/health
 
-Then start the frontend from `k8s-demo-fe` (see that repo’s README). Full end-to-end manual steps: [k8s-demo-infra/docs/local-development.md](../k8s-demo-infra/docs/local-development.md).
+Then start the frontend from `k8s-demo-fe` (see that repo’s README). Full end-to-end manual steps: [Local Development](https://github.com/bablukpik/k8s-demo-infra/blob/main/docs/local-development.md).
 
 ## Docker image
 
@@ -57,22 +57,19 @@ Then start the frontend from `k8s-demo-fe` (see that repo’s README). Full end-
 docker build -t k8s-demo-be:v1.0 .
 ```
 
-## Full stack / Kubernetes
+## Kubernetes
 
-| Mode | Command / location |
-|------|--------------------|
-| Full Docker Compose | `cd ../k8s-demo-infra && docker compose up --build` |
-| Kubernetes | see [k8s-demo-infra/README.md](../k8s-demo-infra/README.md) |
+See [Kubernetes deploy guide](https://github.com/bablukpik/k8s-demo-infra/blob/main/docs/kubernetes-deploy.md).
 
 ## Environment variables
 
 Copy from `.env.example` into `.env` for local runs.
 
-| Variable    | Description                                      | Local default     |
-|-------------|--------------------------------------------------|-------------------|
-| `PORT`      | HTTP port                                        | `8000`            |
-| `USER_NAME` | Mongo username                                   | `admin`           |
-| `USER_PWD`  | Mongo password                                   | `password`        |
-| `DB_URL`    | Host/port                                        | `localhost:27017` |
-| `DB_NAME`   | Database name                                    | `my-db`           |
-| `MONGO_URI` | Optional full URI (overrides the vars above)     | —                 |
+| Variable    | Description                                  | Local default     |
+| ----------- | -------------------------------------------- | ----------------- |
+| `PORT`      | HTTP port                                    | `8000`            |
+| `USER_NAME` | Mongo username                               | `admin`           |
+| `USER_PWD`  | Mongo password                               | `password`        |
+| `DB_URL`    | Host/port                                    | `localhost:27017` |
+| `DB_NAME`   | Database name                                | `my-db`           |
+| `MONGO_URI` | Optional full URI (overrides the vars above) | —                 |
