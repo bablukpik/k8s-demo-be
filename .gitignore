@@ -33,3 +33,8 @@ Thumbs.db
 
 # Docker
 *.pid
+
+# Optional local profile uploads (keep placeholder + README)
+images/*
+!images/placeholder.svg
+!images/README.md

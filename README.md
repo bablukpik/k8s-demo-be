@@ -16,6 +16,14 @@ Sibling repos:
 | GET    | `/profile-picture` | Serve profile image |
 | GET    | `/health`          | Health check        |
 
+## Profile image
+
+- **UI:** click the profile placeholder/picture to upload (JPEG/PNG/WebP).
+- **Manual:** put a file in `images/` as `profile.jpg` (or `.png` / `.webp`).
+- If none is present, the UI shows an initials placeholder.
+
+See [images/README.md](./images/README.md).
+
 ## Manual local development
 
 Run Mongo with Docker, and this API with npm (no Kubernetes).

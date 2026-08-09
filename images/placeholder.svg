@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="328" height="287" viewBox="0 0 328 287" role="img" aria-label="Profile placeholder">
+  <rect width="328" height="287" fill="#e8e8e8"/>
+  <circle cx="164" cy="110" r="48" fill="#bdbdbd"/>
+  <ellipse cx="164" cy="230" rx="90" ry="55" fill="#bdbdbd"/>
+  <text x="164" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#757575">Add profile.jpg to images/</text>
+</svg>
