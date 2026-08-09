@@ -48,13 +48,26 @@ export class ProfileService {
       .findOne({ userid: this.defaultUserId })
       .lean()
       .exec();
-    return user ?? {};
+
+    if (!user) {
+      return {};
+    }
+
+    const legacy = user as typeof user & { interests?: string };
+    return {
+      ...user,
+      skills: user.skills || legacy.interests,
+    };
   }
 
   async updateProfile(dto: UpdateProfileDto) {
     const userObj = { ...dto, userid: this.defaultUserId };
     await this.userModel
-      .updateOne({ userid: this.defaultUserId }, { $set: userObj }, { upsert: true })
+      .updateOne(
+        { userid: this.defaultUserId },
+        { $set: userObj, $unset: { interests: '' } },
+        { upsert: true },
+      )
       .exec();
     return userObj;
   }

@@ -16,7 +16,7 @@ Sibling repos:
 | GET    | `/profile-picture` | Serve profile image |
 | GET    | `/health`          | Health check        |
 
-Profile fields: `name`, `title`, `email`, `interests` (+ photo via `/profile-picture`).
+Profile fields: `name`, `title`, `email`, `skills` (+ photo via `/profile-picture`).
 
 ## Profile image
 

@@ -18,7 +18,7 @@ export class User {
   email?: string;
 
   @Prop()
-  interests?: string;
+  skills?: string;
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);
