@@ -16,6 +16,8 @@ Sibling repos:
 | GET    | `/profile-picture` | Serve profile image |
 | GET    | `/health`          | Health check        |
 
+Profile fields: `name`, `title`, `email`, `interests` (+ photo via `/profile-picture`).
+
 ## Profile image
 
 - **UI:** click the profile placeholder/picture to upload (JPEG/PNG/WebP).
