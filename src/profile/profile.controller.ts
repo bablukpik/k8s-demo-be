@@ -1,4 +1,11 @@
-import { Body, Controller, Get, Post, Res, StreamableFile } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  Post,
+  Res,
+  StreamableFile,
+} from '@nestjs/common';
 import type { Response } from 'express';
 import { UpdateProfileDto } from './dto/update-profile.dto';
 import { ProfileService } from './profile.service';
